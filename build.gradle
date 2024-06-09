@@ -15,6 +15,7 @@ dependencies {
     implementation enforcedPlatform("io.quarkus.platform:quarkus-bom:${quarkusVersion}")
     implementation 'io.quarkus:quarkus-rest-jackson'
     implementation 'io.quarkus:quarkus-websockets'
+    implementation 'io.quarkus:quarkus-websockets-next'
     implementation 'io.netty:netty-transport-native-epoll::linux-x86_64'
 
     testImplementation 'io.quarkus:quarkus-junit5'

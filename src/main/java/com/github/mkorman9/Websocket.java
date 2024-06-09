@@ -1,14 +1,16 @@
 package com.github.mkorman9;
 
-import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.websocket.OnOpen;
-import jakarta.websocket.Session;
-import jakarta.websocket.server.ServerEndpoint;
+import io.quarkus.websockets.next.OnOpen;
+import io.quarkus.websockets.next.WebSocket;
+import io.quarkus.websockets.next.WebSocketConnection;
+import jakarta.inject.Inject;
 
-@ServerEndpoint("/ws")
-@ApplicationScoped
+@WebSocket(path = "/ws")
 public class Websocket {
+    @Inject
+    WebSocketConnection connection;
+
     @OnOpen
-    void onOpen(Session session) {
+    void onOpen() {
     }
 }
